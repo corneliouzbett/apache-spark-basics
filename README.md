@@ -1,4 +1,4 @@
-# apache-spark-basics
+# Apache Spark Basics
 Learning apache spark basics, data processing
 
 # Overview
@@ -11,3 +11,6 @@ The first thing a Spark program must do is to create a SparkContext object, whic
 
         conf = SparkConf().setAppName(appName).setMaster(master)
         sc = SparkContext(conf=conf)
+
+# Resilient Distributed Datasets (RDDs)
+Spark revolves around the concept of a resilient distributed dataset (RDD), which is a fault-tolerant collection of elements that can be operated on in parallel. There are two ways to create RDDs: parallelizing an existing collection in your driver program, or referencing a dataset in an external storage system, such as a shared filesystem, HDFS, HBase, or any data source offering a Hadoop InputFormat.
